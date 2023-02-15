@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro Higuera Moreno">
+    <title>ProtonVPN - Flexbox</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /*         html
+        {
+            background-color: #2d2d2d;
+        } */
+        a{
+            text-decoration: none;
+
+        }
+
+        .cajaGlobal {
+            display: flex;
+            flex-flow: column;
+            padding: 10px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 992px;
+        }
+
+        .cajaNav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h2 {
+            color: green;
+            font-size: 20px;
+        }
+
+        .atras {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+        }
+
+        #botonAtras {
+            padding: 10px 10px;
+            width: 70px;
+            background-color: white;
+            border: 1px solid grey;
+            cursor: pointer;
+
+        }
+
+        button:hover,
+        #botonAtras:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .logo {
+            margin-left: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ayuda {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .cajaReg {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hr1 {
+            display: flex;
+            justify-content: left;
+            width: 42%;
+        }
+
+        .hr2 {
+            display: flex;
+            justify-content: right;
+            width: 42%;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        a {
+            color: green;
+        }
+
+        .myButton {
+            background-color: transparent;
+            border-radius: 5px;
+            border: 2px solid green;
+            display: inline-block;
+            cursor: pointer;
+            color: green;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 11px 23px;
+            text-decoration: none;
+        }
+
+        .registrarse {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .divAux {
+            width: 124%;
+            display: flex;
+            justify-content: left;
+        }
+
+        .terminos {
+            display: flex;
+            justify-content: right;
+        }
+
+        .nUser {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        .aceptaTerminos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #crearCuenta {
+            border: 2px solid green;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding: 15px 15px;
+            width: 200px;
+        }
+
+        .botonCrear {
+            display: flex;
+            justify-content: left;
+        }
+
+        .divAux2 {
+            width: 49%;
+            display: flex;
+            justify-content: left;
+        }
+
+        #crearCuenta:hover {
+
+            color: green;
+            cursor: pointer;
+            background-color: white;
+        }
+
+        input {
+            border: 1px solid green;
+        }
+        .cajaContenido
+        {
+            width: 100%;
+            display: inline-flex;
+            /* border: 2px solid red; */
+        }
+        .articulo1 {
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+            /* border: 1px solid black; */
+        }
+        #necAyuda:hover
+        {
+            color: black;
+        }
+        .aside {
+            /* border: 1px solid red; */
+            width: 60%;
+            display: flex;
+            flex-flow: column;
+            padding-top: 125px;
+
+        }
+        #cajaDetalles
+        {
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+        }
+        .cabezaAside{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        #cajaMejoras
+        {
+            border: 1px solid grey;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            flex-flow: column;
+        }
+        .pngGuion
+        {
+            width: 15px;
+            height: 15px;
+            margin-bottom: 13px;
+        }
+        .detallesContenido
+        {
+            padding-left: 10px;
+            display: inline-flex;
+            flex-flow: column;
+            justify-content: left;
+            align-items: flex-start;
+        }
+        .mejora
+        {
+           margin-bottom: 10px;
+           margin-left: 5px;
+        }
+        /*         #ojoIcono
+        {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 380px;
+            margin-top: 50px;           
+        }
+        #ojoIcono2
+        {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 380px;
+            margin-top: 50px;     
+        } */
+        .cajaFooter
+        {
+            background-color: #2d2d2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        #linkFooter
+        {
+            text-decoration: none;
+
+        }
+        #linkFooter:hover
+        {
+            color: white;
+        }
+        #botonPlan
+        {
+            background-color: green;
+            width: 100%;
+            padding: 10px 10px;
+            margin: 5px;
+            border: 2px solid green;
+            border-radius: 10px;
+        }
+        #botonPlan:hover
+        {
+            color: green;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cajaGlobal">
+        <main>
+
+            <head>
+                <nav>
+                    <div class="cajaNav">
+                        <div class="atras">
+                            <a href="#">
+                                <button id="botonAtras">
+                                    Atrás
+                                </button>
+                            </a>
+                        </div>
+                        <div class="logo">
+                            <a href="https://protonvpn.com/es/" target="_blank">
+                                <img style="display: flex; justify-content: center;" src="img/logo.png"
+                                    alt="Logo ProtonVPN" width="400px" height="125px">
+                            </a>
+                        </div>
+                        <div class="ayuda">
+                            <img  src="img/salva.png" alt="PNG salvavidas" width="25px" height="25px"
+                                style="margin-right: 5px;">
+                            <p ><a id="necAyuda"href="#" style="text-decoration: none;"> ¿Necesitas ayuda?</a></p>
+                        </div>
+                    </div>
+                </nav>
+                <div class="cajaReg">
+                    <div class="hr1">
+                        <hr width="100%">
+                    </div>
+                    <h2 style="color: black;">Regístrate</h2>
+                    <div class="hr2">
+                        <hr width="100%">
+                    </div>
+                </div>
+            </head>
+            <div class="cajaContenido">
+                <section>
+
+                    <article class="articulo1">
+                        <h1>Crear una cuenta</h1>
+                        <form name="CrearNuevaCuenta" action="mailto:<!--Tu email -->"
+                            method="POST" enctype="text/plain">
+                            <div class="cajaRegistro">
+
+                                <div class="registrarse">
+                                    <span class="nUser"><label for="nombre">Nombre de Usuario</label><img
+                                            style=" margin-left:5px; width:15px; height:15px;" src="img/exc.png"
+                                            alt="PNG exclamacion"></span>
+                                    <input required style="padding: 10px 10px; width: 280px;" type="text" value=""
+                                        id="nombre" name="nombre" placeholder="Nombre de usuario">
+                                </div>
+                                <div class="registrarse">
+                                    <span class="nUser">
+                                        <label for="contrasena">Contraseña</label>
+                                        <img style=" margin-left:5px; width:15px; height:15px;" src="img/exc.png"
+                                            alt="PNG exclamacion">
+                                    </span>
+                                    <!-- <span><img id="ojoIcono" src="img/ojo.png" alt="icono ojo"></span>
+                                <span><img id="ojoIcono2" src="img/ojo.png" alt="icono ojo"></span> -->
+                                    <input required style="padding: 10px 10px; width: 280px;" type="password"
+                                        id="contrasena" name="contrasena" placeholder="Contraseña">
+                                </div>
+                                <div class="registrarse">
+                                    <span class="nUser"><label for="confirmar"></label></span>
+                                    <input required style="padding: 10px 10px; width: 280px;" type="password"
+                                        id="confirmar" name="confirmar" placeholder="Confirmar Contraseña">
+                                </div>
+                                <div class="registrarse">
+                                    <span class="nUser"><label for="email">Dirección de Correo Electrónico</label><img
+                                            style=" margin-left:5px; width:15px; height:15px;" src="img/exc.png"
+                                            alt="PNG exclamacion"></span>
+                                    <input required style="padding: 10px 10px; width: 280px;" type="email" id="email"
+                                        name="email" placeholder="jhon.doe@example.com">
+                                </div>
+                                <div class="terminos">
+                                    <div class="divAux"></div>
+                                    <div class="aceptaTerminos">
+                                        <p> Al hacer click en Crear Cuenta, acepta cumplir con nuestros <a
+                                                href="#">Términos
+                                                de servicio</a> y <a href="#">Política de privacidad</a>.</p>
+                                    </div>
+                                </div>
+                                <div class="botonCrear">
+                                    <div class="divAux2"></div>
+                                    <input required id="crearCuenta" onclick="alertar();" type="submit"
+                                        value="Crear Cuenta">
+                                </div>
+                                <div class="iniciarSesion">
+                                    <hr width="100%">
+                                    <h2>¿Ya tienes una cuenta ProtonVPN?</h2>
+                                    <p>Si eres un usuario de ProtonMail, puedes usar tu cuenta de Proton para iniciar
+                                        sesion
+                                        en ProtonVPN.</p>
+                                    <a href="https://account.protonvpn.com/login" target="_blank"><button
+                                            class="myButton">Iniciar sesión</button></a>
+                                </div>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <aside class="aside">
+                    <div id="cajaDetalles">
+                        <div class="cabezaAside">
+                            <h2>Detalles del plan deFree</h2>
+                        </div>
+                        <div class="detallesContenido">
+                            <span class="mejora">----   1 conexión VPN.</span>
+                            <span class="mejora">----   Servidores en 3 países.</span>
+                            <span class="mejora">----   Velocidad media.</span>
+                            <span class="mejora">----   Sin registro/Sin anuncios</span>
+                            <span class="mejora">----   <del>Compatibilidad de archivos P2<br>/ Soporte para BitTorrent</span></del>
+                            <span class="mejora">---- <del>   Adblocker (NetShield)</span></del>
+                            <span class="mejora">---- <del>   Secure Core VPN</span></del>
+                            <span class="mejora">---- <del>   Tor sobre VPN</span></del>
+                            <span class="mejora">---- <del>   Acceder al contenido bloqueado</span></del>
+                        </div>
+                    </div>
+                    <div id="cajaMejoras">
+                        <div class="cabezaAside">
+                            <h2>Mejora y obtén más</h2>
+                        </div>
+                            <div class="detallesContenido">
+                                <span class="mejora"> <span style="color: green;">✓</span>   Servidores VPN de gran velocidad 1 Gbps.</span>
+                                <span class="mejora"> <span style="color: green;">✓</span>   Acceso a 54 países</span>
+                                <span class="mejora"> <span style="color: green;">✓</span>   Soporte de archivos compartidos / P2P</span>
+                            </div>
+                        <div class="cabezaAside">
+                            <button id="botonPlan">Prueba Basic por solo 4&euro; / mes</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+        <footer>
+            <div class="cajaFooter">
+                <h2><a id="linkFooter" href="https://github.com/BashMagno" target="_blank"> ✓ AHM-2023 &copy;</a></h2>
+            </div>
+        </footer>
+    </div>
+</body>
+<script type="text/javascript">
+
+    //Comprobaciones de la contraseña (Pijería)
+
+    var contra = document.getElementById("contrasena");
+    var confContra = document.getElementById("confirmar");
+    var usuario = document.getElementById("nombre");
+    var email = document.getElementById("email");
+
+    function alertar() {
+        var longContra1 = 0;
+        var longContra2 = 0;
+/*         if (usuario.value !== null || email.value !== null)
+        {
+            alert("Usuario o email incompletos, por favor rellene todos los campos");
+        } */
+        for (let i = 0; i < contra.value.length; i++) {
+            longContra1++;
+        }
+        for (let i = 0; i < confContra.value.length; i++) {
+            longContra2++;
+        }
+        console.log(longContra1 + " " + longContra2);
+        if ((contra.value != confContra.value) && (longContra1 != longContra2)) {
+            alert("Contraseñas no coinciden...La primera contraseña tiene " + longContra1 + " caracteres y la segunda contraseña tiene " + longContra2 + " caracteres, intente de nuevo");
+        } else if ((contra.value != confContra.value) && (longContra1 == longContra2)) {
+            alert("Contraseñas no coinciden...La longitud de ambas contraseñas es correcta, verifique que has introducido los caracteres de la misma forma. intente de nuevo");
+        }
+        else {
+            alert("Bienvenido " + usuario.value + " con email:  " + email.value + " disfruta de tu VPN con el plan deFree");
+        }
+    }
+</script>
+
+</html>
