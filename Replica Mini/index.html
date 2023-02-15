@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alejandro Higuera Moreno">
+    <meta name="description" content="Página Mini con Flexbox">
+    <title>Coches - Flexbox</title>
+    <style>
+        *
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        html{
+            background-color: #2d2d2d;
+        }
+        h1
+        {
+            color: lightblue;
+        }
+        a
+        {
+            text-decoration: none;
+            color: white;
+        }
+        a:hover
+        {
+            color: lightskyblue;
+        }
+        p, li
+        {
+            color: white;
+        }
+        .logo, .texto
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer
+        {
+            display: flex;
+            background-color: black;
+            width: 100%;
+            height: 300px;
+        }
+        .cajaGlobal
+        {
+            /* box-shadow: 4px 4px  grey; */
+            display: flex;
+            justify-content: center;
+            /*border: 1px solid red; */
+            margin: auto;
+            flex-flow: row wrap;
+            max-width: 992px;
+            background-color: white;
+        }
+/*         main
+        {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            
+        } */
+        .cajaArticle
+        {
+            width: 100%;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: row wrap;
+            margin-bottom: 30px;
+        }
+        .cajaCoche
+        {
+            margin: 10px;
+            width: 327px;
+            height: 272px;
+            display: flex;
+            flex-flow: wrap column;
+            align-items: center;
+            padding-bottom: 5px;
+            box-shadow: 4px 4px grey;
+            background-color: lightgrey;
+        }
+        img
+        {
+            display: flex;
+            object-fit: cover;
+            justify-content: center;
+            flex-flow: row wrap;
+            height: 115px;
+            width: height;
+        }
+        .imgCoche
+        {
+            width: 292px;
+            height: 194px;
+        }
+        #cajaFooter1{
+/*             border: 2px solid blue;
+ */            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+        }
+        #cajaFooter2
+        {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            /* border: 2px solid green; */
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="cajaGlobal">
+        <main>
+            <header>
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo Mini &copy;" style="height: 300px;width: height;">
+                </div>
+                <div class="texto">
+                    <h1>Modelos 2020 - 2021</h1>
+                </div>
+                <nav>
+
+                </nav>
+            </header>
+            <section>
+                <article>
+                    <div class="cajaArticle">
+                        <div class="cajaCoche"><img class="imgCoche" src="img/mini-azul.png" alt="mini azul"><p style="color: lightskyblue;">Mini Azul</p><button>Conecta</button></div>
+                        <div class="cajaCoche"><img class="imgCoche" src="img/mini-verde.png" alt="mini verde"><p style="color: lightskyblue;">Mini Verde</p><button>Naturaleza</button></div>
+                        <div class="cajaCoche"><img class="imgCoche" src="img/mini-blanco.png" alt="mini blanco"><p style="color: lightskyblue;">Mini Blanco</p></div>
+                        <div class="cajaCoche"><img class="imgCoche" src="img/mini-naranja.png" alt="mini naranja"><p style="color: lightskyblue;">Mini Naranja</p></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div id="cajaFooter1">
+                <img src="img/logo2.png" alt="Logo mini 2 ">
+                <p>&copy; Catálogo mini modelos 2021</p>
+                <p><strong>V 2.0 (12345)</strong></p>
+            </div>
+            <div id="cajaFooter2">
+                <ul>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                </ul>
+            </div>
+            
+        </footer>
+    </div>
+</body>
+<div style="display: flex; align-items: center; justify-content: flex-end;">
+    <a href="css.txt" target="_blank"><button>Pulsa aquí para mostrar el css</button></a>
+</div>
+</html>
